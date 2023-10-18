@@ -46,6 +46,33 @@ padding: 2rem 9%;
 section:nth-child(even){
   background: #eee;
 }
+.sub-heading{
+  text-align: center;
+  color: var(--green);
+  font-size: 2rem;
+}
+.heading{
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--black);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+}
+
+.btn:hover{
+  background: var(--green);
+  letter-spacing: .1rem;
+}
 
 header .logo {
   color: var(--black);
@@ -112,9 +139,15 @@ header .icons #menu-bars {
 
 
 .image img {
-  width: 40%;
-  height: 40%;
-  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;  
+}
+
+img{
+  width: 200px;
+  height: 150px;
+  /* gap: 10px; */
 }
 
 #search-form.active {
@@ -186,7 +219,17 @@ header .icons #menu-bars {
   header {
     padding: 1rem 2rem;
   }
+  section {
+    padding: 2rem;
+  }
+
+  .dishes .box-container .box img{
+    height: 17rem;
+    margin: 1rem 0;
+  }
+  
 }
+
 
 @media (max-width: 775px) {
   header .icons #menu-bars {
@@ -241,8 +284,11 @@ header .icons #menu-bars {
   flex: 1 1 45rem;
 }
 
-.home .home-slider .slide .image .img{
+/* .home .home-slider .slide .image .img{
   width: 100%;
+} */
+.home .home-slider .slide .content {
+  flex: 1 1 45rem;
 }
 
 .home .home-slider .slide .content span{
@@ -257,6 +303,50 @@ header .icons #menu-bars {
 
 .home .home-slider .slide .content p{
   color: var(--light-color);
-  font-size: 2rem;
-  padding: 5rem 0;
+  font-size: 2.2rem;
+  line-height: 1.5;
 }
+
+.home {
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow: hidden; /* Hide content that overflows the viewport */
+}
+
+.swiper-pagination-bullet{
+  background: var(--green);
+}
+.home .home-slider .slide .content h3{
+  font-size: 5rem;
+}
+.dishes .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+}
+
+.dishes .box-container .box{
+  padding: 2.5rem;
+  background:#fff;
+  border: 1rem solid rgba(0, 0,0, 0.2);
+box-shadow: var(--box-shadow);
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+
+.dishes .box-container .box img{
+  height: 17rem;
+  margin: 1rem 0;
+}
+
+.dishes .box-container .box img{
+  color: var(--black);
+  font-size: 2.5rem;
+}
+.dishes .box-container .box span{
+  color: var(--green);
+  font-weight: bolder;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
